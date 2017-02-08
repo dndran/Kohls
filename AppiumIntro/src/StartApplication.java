@@ -37,11 +37,11 @@ public class StartApplication {
 
    driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-   System.out.println("Finding Element");
-
    driver.findElementById("com.kohls.mcommerce.opal:id/id_actionBar_list_icon").click();
 
-   ReusableBlocks reUse = new ReusableBlocks();
+  //Reusable Functions start here
+   
+  ReusableBlocks reUse = new ReusableBlocks();
   reUse.FindElement("android.widget.TextView", "Shop by Category", driver);
   Thread.sleep(10000);
   reUse.FindElement("android.widget.TextView", "Men", driver);
@@ -49,6 +49,8 @@ public class StartApplication {
   reUse.FindElement("android.widget.TextView", "Shoes", driver);
   Thread.sleep(5000);
   reUse.FindElement("android.widget.TextView", "Boots", driver);
+  Thread.sleep(5000);
+  reUse.ClickProduct(driver);
   } catch (Exception e) {
    // TODO Auto-generated catch block
    e.printStackTrace();

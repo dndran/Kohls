@@ -27,8 +27,15 @@ System.out.println("Header Validated");
 	}
 		   
 }
-	public void ClickProduct()
+	public void ClickProduct(AndroidDriver driver)
 	{
+		List <WebElement> listing = driver.findElements(By.className("android.widget.RelativeLayout"));
+		
+		for (WebElement prod : listing){
+			/*prod.get
+			prod.getAttribute("index");*/
+			System.out.println(prod);	
+		}
 		
 	}
 }
