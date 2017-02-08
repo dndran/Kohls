@@ -29,13 +29,15 @@ System.out.println("Header Validated");
 }
 	public void ClickProduct(AndroidDriver driver)
 	{
-		List <WebElement> listing = driver.findElements(By.className("android.widget.RelativeLayout"));
+		driver.findElementById("com.kohls.mcommerce.opal:id/id_product_itemOriginalPriceTxt").click();
+	}
+	
+	public void ClickSelectSize(AndroidDriver driver){
 		
-		for (WebElement prod : listing){
-			/*prod.get
-			prod.getAttribute("index");*/
-			System.out.println(prod);	
-		}
-		
+		driver.findElementById("com.kohls.mcommerce.opal:id/spinner_text").click();
+	}
+	public void SelectSize(AndroidDriver driver){
+		List <WebElement> size = driver.findElements(By.id("csom.kohls.mcommerce.opal:id/spinner_text"));
+		size.get(0).click();
 	}
 }

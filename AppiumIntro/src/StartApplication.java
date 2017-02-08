@@ -51,6 +51,10 @@ public class StartApplication {
   reUse.FindElement("android.widget.TextView", "Boots", driver);
   Thread.sleep(5000);
   reUse.ClickProduct(driver);
+  Thread.sleep(2000);
+  reUse.ClickSelectSize(driver);
+  Thread.sleep(2000);
+  reUse.SelectSize(driver);
   } catch (Exception e) {
    // TODO Auto-generated catch block
    e.printStackTrace();
